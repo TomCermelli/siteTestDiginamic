@@ -1,3 +1,13 @@
+<?php
+require "php/global_var.php";
+// on se connecte à notre base
+$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+//Afficher toute erreur de connexion
+ if ($mysqli->connect_error) {
+   die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+ }
+?>
+
 <html>
   <head>
     <title>Formulaire en PHP/MySQL</title>
@@ -38,5 +48,35 @@
       </section>
       <input type="submit" value="Submit" />
     </form>
+
+    <h3>Bac</h3>
+    <?php
+      $requete1 = "SELECT lastname, firstname, message FROM user_info WHERE level_user = 'Bac'"; //la requete SQL
+      $result1 = mysqli_query($mysqli, $requete1); // on envoie la query
+      $resultCheck1 = mysqli_num_rows($result1); // on regarde s'il y a bien des données dans la BDD
+      if($resultCheck1 > 0) { // si nous avons au moin 1 infos on envoie affiche les résultats sous forme de tableau
+
+        echo '<table align="center" cellspacing = "5" cellpadding ="8">
+        <tr><td align="left"><b>Nom</b></td></tr>
+        <tr><td align="left"><b>Prénom</b></td></tr>
+        <tr><td align="left"><b>Message</b></td></tr>
+        </table>';
+        while($row = mysqli_fetch_assoc($result1)){
+          echo '<tr><td align="left"</tr>' .
+          $row['lastname'] . '<tr><td align="left"</tr>' .
+          $row['firstname'] . '<tr><td align="left"</tr>' .
+          $row['message'] . '<tr><td align="left"</tr>';
+          echo "<br />";
+        }
+      }
+    ?>
+    <h3>Bac+2</h3>
+
+    <h3>Master</h3>
+
+    <h3>Doctorat</h3>
+
+    <h3>Autre</h3>
+
   </body>
 </html>
