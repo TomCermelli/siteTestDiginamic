@@ -1,0 +1,7 @@
+{
+    "name": "mailing/tom",
+    "description": "config mail",
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
