@@ -26,7 +26,7 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
       $mail->Host = MAIL_SMTP;                    // Set the SMTP server to send through
       $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHP
       $mail->isSMTP(true);
-      $mail->setFrom($_POST['email'], 'Mailer');
+      $mail->setFrom($_POST['email'], $_POST['email']);
       $mail->Username = MAIL_LOG;                     // SMTP username
       $mail->Password = MAIL_PAS;                               // SMTP password
       $mail->addAddress(MAIL_LOG, '');     // Add a recipient
