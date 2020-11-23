@@ -1,3 +1,7 @@
+<?php
+$current = "index";
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -9,23 +13,7 @@
 
 </head>
 <body>
-  <div class="headerContainer">
-    <header>
-      <nav class="navigation">
-        <ul>
-          <div class="navBarContainer">
-            <div class="boxi">
-              <li class="navBar"><a href="#news">Accueil</a></li>
-              <li class="navBar"><a href="form.php">Formulaire</a></li>
-              <li class="navBar"><a href="contact.php">Contact</a></li>
-              <li class="navBar"><a href="test_tech.php">Tests Techniques</a></li>
-            </div>
-          </div>
-        </ul>
-      </nav>
-    </header>
-  </div>
-
+  <?php include "html/header.php" ?>
   <div class="bodyContainer">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -40,9 +28,7 @@
         </div>
       </div>
     </div>
-
     <div class="techContainer">
-
       <div class="techPosition">
         <img class="logoSize" src="assets/html_logo.jpg" alt="logo HTML">
         <p class="techText">
@@ -61,9 +47,7 @@
           J'ai utilisé HTML pour faire toute la structure de ce site. C'est de cette manière que j'ai pus établir mon CSS par la suite
         </p>
       </div>
-
-      </div>
-
+    </div>
     <div class="techContainer">
       <div class="techPosition col-3">
         <img class="logoSize" src="assets/bootstrap_logo.png" alt="logo Bootstrap">
@@ -78,7 +62,6 @@
         </p>
       </div>
     </div>
-
     <div class="heroContainer">
       <div class="col-6 pad">
         <img src="assets/espace_de_travail.jpg" alt="espace de travail" width="100%">
@@ -91,7 +74,6 @@
         </div>
       </div>
     </div>
-
     <div class="heroContainer">
       <div class="col-6 heroText">
         <div class="heroText">
@@ -104,28 +86,7 @@
         <img src="assets/relax.jpg" alt="relax image" width="100%">
       </div>
     </div>
-
-
-
-    <div class="footerContainer">
-      <footer>
-        <div class="posFooter">
-          <div class="detailFooter">
-            <div style="width: 100%">
-              <iframe width="250" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=26%20Rue%20de%20Clementville+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-            </div>
-          </div>
-          <div class="detailFooter">
-            <p class="infoFooter">Tom Cermelli <br />
-              07.81.21.44.95 <br />
-              26C Rue de Clementville, 34070 Montpellier <br />
-              Tom.Cermelli91@gmail.com <br />
-              <a href="https://github.com/TomCermelli">https://github.com/TomCermelli</a>
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    <?php include "html/footer.html" ?>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

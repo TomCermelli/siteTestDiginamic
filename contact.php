@@ -9,6 +9,7 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 require 'vendor/autoload.php';
 
 $message_sent = false;
+$current = "contact";
 $mail = new PHPMailer();
 if(isset($_POST['email']) && $_POST['email'] != ''){
   if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
@@ -46,43 +47,49 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
     <title>Formulaire en de contact en PHPL</title>
     <meta charset="utf-8"> <!--afin de lire les caratères spéciaux comme le "é" "è"-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/head_foot.css">
+    <link rel="stylesheet" href="css/contact.css">
   </head>
   <body>
 <?php
  if($message_sent):
 ?>
+  <?php include "html/header.php" ?>
 
     <h3>Merci, je vous recontacterai dés que possible.</h3>
+
+  <?php include "html/footer.html" ?>
 
 <?php
 else:
 ?>
-      <h1>Contact</h1>
-      <p>Vous pouvez me contacter via le formulaire de contact ci-dessous<p>
-      <!--On envoie un formulaire avec la methode POST, l'action nous permet d'indiquer quelle fichier on doit viser avec ce formulaire-->
-      <form method="post" action="contact.php">
-        <section class="userName"> <!--cette section représente le nom/prénom de l'user-->
-            <label for="Nom">Nom :</label>
-        		<input type="text" name="name" placeholder="Nom..." required/>
-        </section>
-        <section class="mail">
-            <label for="Email">Email :</label>
-        		<input type="email" name="email" placeholder="Email..." />
-        </section>
-        <section class="subject">
-            <label for="Subject">Sujet :</label>
-        		<input type="text" name="subject" placeholder="Sujet..." />
-        </section>
-        <section class="userMessage">
-          <label for="Message">Message</label><br>
-          <textarea id="messageUser" name="message" rows="3" cols="40"></textarea>
-        </section>
-        <input type="submit" value="Submit" />
-      </form>
-    <?php
-    endif
-    ?>
+  <?php include "html/header.php" ?>
+    <h1>Contact</h1>
+    <p>Vous pouvez me contacter via le formulaire de contact ci-dessous<p>
+    <!--On envoie un formulaire avec la methode POST, l'action nous permet d'indiquer quelle fichier on doit viser avec ce formulaire-->
+    <form method="post" action="contact.php">
+      <section class="userName"> <!--cette section représente le nom/prénom de l'user-->
+          <label for="Nom">Nom :</label>
+      		<input type="text" name="name" placeholder="Nom..." required/>
+      </section>
+      <section class="mail">
+          <label for="Email">Email :</label>
+      		<input type="email" name="email" placeholder="Email..." />
+      </section>
+      <section class="subject">
+          <label for="Subject">Sujet :</label>
+      		<input type="text" name="subject" placeholder="Sujet..." />
+      </section>
+      <section class="userMessage">
+        <label for="Message">Message</label><br>
+        <textarea id="messageUser" name="message" rows="3" cols="40"></textarea>
+      </section>
+      <input type="submit" value="Submit" />
+    </form>
+  <?php include "html/footer.html" ?>
+  <?php
+  endif
+  ?>
 
   </body>
 </html>
