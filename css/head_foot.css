@@ -1,6 +1,7 @@
 /*******************HEADER*******************/
-
 .headerContainer{
+  min-height: 150px;
+  padding: 2.5% 0 0 0;
   background-color: rgb(57,62,89);
 }
 
@@ -8,22 +9,19 @@ a {
   text-decoration: none;
 }
 
-.navigation ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.current{
+  background-color: rgb(56, 84, 211);
+  color: white;
 }
 
-.navBarContainer{
-  display: flex;
-  justify-content: center;
+nav a {
+  color:white;
 }
 
-.boxi {
-  display: flex;
-  justify-content: center;
+nav a:hover {
+  color: rgb(170, 170, 170);
 }
+
 
 /*******************FOOTER*******************/
 

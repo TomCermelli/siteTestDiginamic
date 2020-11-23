@@ -6,6 +6,7 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
  if ($mysqli->connect_error) {
    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
  }
+ $current = "form";
 ?>
 
 <html>
@@ -17,6 +18,7 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     <link rel="stylesheet" href="css/form.css">
   </head>
   <body>
+    <?php include "html/header.php" ?>
     <h1 class="MainTitle">Formulaire</h1>
     <!--On envoie un formulaire avec la methode POST, l'action nous permet d'indiquer quelle fichier on doit viser avec ce formulaire-->
 
@@ -183,5 +185,6 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
           }
         ?>
     </table>
+    <?php include "html/footer.html" ?>
   </body>
 </html>
