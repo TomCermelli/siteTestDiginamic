@@ -1,0 +1,37 @@
+.techContainer {
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  margin: 5% 0 5% 0;
+}
+
+.techPosition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5% 0 5%;
+}
+
+.logoSize {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%
+}
+
+.techText {
+  margin: 7% 0 0 0;
+  line-height: 30px;
+}
+
+.heroContainer {
+  display: flex;
+}
+
+.heroText {
+padding: 8%;
+
+}
+
+.pad {
+  padding: 0 0 0 0;
+}
