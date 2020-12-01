@@ -7,4 +7,5 @@
   define("MAIL_SMTP", "smtp.gmail.com"); /*le smtp correspondant au mail (exemple si vous utilisez gmail le smtp sera "smtp.gmail.com")*/
   define("MAIL_LOG", ""); /*Identifiant du mail*/
   define("MAIL_PAS", ""); /*Mot de passe du mail*/
+
 ?>
