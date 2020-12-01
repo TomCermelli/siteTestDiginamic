@@ -24,16 +24,16 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
               )
           );
 
-      $mail->Host = MAIL_SMTP;                    // Set the SMTP server to send through
-      $mail->Port = 587;                                    // TCP port to connect to, use 465 for `PHP
+      $mail->Host = MAIL_SMTP;                    // Le SMPTP que l'on va utiliser par exemple gmail
+      $mail->Port = 587;
       $mail->isSMTP(true);
-      $mail->setFrom($_POST['email'], $_POST['email']);
-      $mail->Username = MAIL_LOG;                     // SMTP username
-      $mail->Password = MAIL_PAS;                               // SMTP password
-      $mail->addAddress(MAIL_LOG, '');     // Add a recipient
+      $mail->setFrom($_POST['email'], $_POST['email']); // le nom de l'expéditeur
+      $mail->Username = MAIL_LOG;                     // SMTP le login de notre mail
+      $mail->Password = MAIL_PAS;                               // le mot de passe de notre mail
+      $mail->addAddress(MAIL_LOG, '');
 
       // Content
-      $mail->isHTML(true);                                  // Set email format to HTML
+      $mail->isHTML(true);                                  // On envoie un email sous forme HTML
       $mail->Subject = $_POST['subject'];
       $mail->Body    = $_POST['message'];
       $mail->send();
@@ -58,34 +58,52 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
 
     <h3>Merci, je vous recontacterai dés que possible.</h3>
 
-  <?php include "html/footer.html" ?>
 
 <?php
 else:
 ?>
   <?php include "html/header.php" ?>
-    <h1>Contact</h1>
-    <p>Vous pouvez me contacter via le formulaire de contact ci-dessous<p>
+  <div class="contactContainer">
+    <h1 class="mainTitle">Contact</h1>
+    <p class="heroText">Vous pouvez me contacter via le formulaire de contact ci-dessous<p>
     <!--On envoie un formulaire avec la methode POST, l'action nous permet d'indiquer quelle fichier on doit viser avec ce formulaire-->
     <form method="post" action="contact.php">
-      <section class="userName"> <!--cette section représente le nom/prénom de l'user-->
-          <label for="Nom">Nom :</label>
-      		<input type="text" name="name" placeholder="Nom..." required/>
-      </section>
-      <section class="mail">
-          <label for="Email">Email :</label>
-      		<input type="email" name="email" placeholder="Email..." />
-      </section>
-      <section class="subject">
-          <label for="Subject">Sujet :</label>
-      		<input type="text" name="subject" placeholder="Sujet..." />
-      </section>
-      <section class="userMessage">
-        <label for="Message">Message</label><br>
-        <textarea id="messageUser" name="message" rows="3" cols="40"></textarea>
-      </section>
-      <input type="submit" value="Submit" />
+
+        <section class="userName"> <!--cette section représente le nom/prénom de l'user-->
+          <div class="col-2">
+            <label style="font-size:1.9em;">Nom :</label>
+          </div>
+          <div class="col-10 pad">
+        		<input type="text" name="name" placeholder="Nom..." style="width: 100%; height: 50px;" required/>
+          </div>
+        </section>
+        <section class="mail">
+          <div class="col-2">
+            <label style="font-size:1.9em;">Email :</label>
+          </div>
+          <div class="col-10 pad">
+        		<input type="email" name="email" placeholder="Email..." style="width: 100%; height: 50px;"/>
+          </div>
+        </section>
+        <section class="subject">
+          <div class="col-2">
+            <label style="font-size:1.9em;">Sujet :</label>
+          </div>
+          <div class="col-10 pad">
+        		<input type="text" name="subject" placeholder="Sujet..." style="width: 100%; height: 50px;"/>
+          </div>
+        </section>
+        <section class="userMessage">
+          <div class="col-2">
+            <label style="font-size:1.8em;">Message:</label><br>
+          </div>
+          <div class="col-10 pad">
+            <textarea id="messageUser" name="message" rows="3" cols="40" style="width: 100%; height: 100px;" placeholder="Message..."></textarea>
+          </div>
+        </section>
+      <input type="submit" value="Submit" style="float:right;"/>
     </form>
+  </div>
   <?php include "html/footer.html" ?>
   <?php
   endif

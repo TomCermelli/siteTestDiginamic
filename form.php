@@ -12,7 +12,7 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 <html>
   <head>
     <title>Formulaire en PHP/MySQL</title>
-    <meta charset="utf-8"> <!--afin de lire les caratères spéciaux comme le "é" "è"-->
+    <meta charset="utf-8" /> <!--afin de lire les caratères spéciaux comme le "é" "è"-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/head_foot.css">
     <link rel="stylesheet" href="css/form.css">
@@ -25,34 +25,34 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     <form class="row form-container" method="post" action="php/controller.php">
     	<div class="col-xs-12">
     		<div class="styled-input wide">
-    			<input type="email" name="email" placeholder="...." />
+    			<input id="Email" type="email" name="email" placeholder="...." />
     			<label for="Email">Email :</label>
     		</div>
     	</div>
     	<div class="pad col-md-6 col-sm-12">
     		<div class="styled-input">
-    			<input type="text" name="lastname" placeholder="...." required/>
+    			<input id="Nom" type="text" name="lastname" placeholder="...." required/>
 					<label for="Nom">Nom :</label>
         </div>
     	</div>
     	<div class="pad col-md-6 col-sm-12">
     		<div class="styled-input" style="float:right;">
-    			<input type="text" name="firstname" placeholder="...."  required/>
+    			<input id="Prénom" type="text" name="firstname" placeholder="...."  required/>
     			<label for="Prénom">Prénom :</label>
     		</div>
     	</div>
       <div class="col-xs-12 levelUser"> <!--Il s'agit des boutons radio pour choisir son niveau d'étude-->
         <span><strong>Quelle est votre plus haut niveau d'étude acquis ?</strong></span>
           <br>
-          <span class="radioPos"><input type="radio" name="level" id="bac" value="Bac"></span>
+          <span class="radioPos"><input type="radio" name="level" id="Bac" value="Bac"></span>
           <label for="Bac">Bac</label>
-          <span class ="radioPos"><input  type="radio" name="level" id="bac+2" value="Bac+2"></span>
+          <span class ="radioPos"><input  type="radio" name="level" id="Bac+2" value="Bac+2"></span>
           <label for="Bac+2">Bac+2</label>
-          <input type="radio" name="level" id="master" value="Master">
+          <input type="radio" name="level" id="Master" value="Master">
           <label for="Master">Master</label>
-          <input type="radio" name="level" id="doctorat" value="Doctorat">
+          <input type="radio" name="level" id="Doctorat" value="Doctorat">
           <label for="Doctorat">Doctorat</label>
-          <input type="radio" name="level" id="autre" value="Autre">
+          <input type="radio" name="level" id="Autre" value="Autre">
           <label for="Autre">Autre</label>
         </div>
         <div class="col-xs-12">
@@ -62,7 +62,7 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
           </div>
         </div>
         <div class="col-xs-12">
-          <input class="btn-lrg submit-btn"type="submit" value="Submit" />
+          <input class="btn-lrg submit-btn" type="submit" value="Submit" />
         </div>
     	</form>
 
@@ -87,7 +87,7 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
               echo "</tr>";
             }
           }
-        ?>
+         ?>
       </table>
 
       <h3 class="levelPos">Bac+2</h3>
@@ -111,7 +111,7 @@ $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
               echo "</tr>";
             }
           }
-        ?>
+         ?>
       </table>
 
       <h3 class="levelPos">Master</h3>
