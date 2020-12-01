@@ -52,7 +52,7 @@ $current = "index";
       <div class="techPosition">
         <img class="logoSize" src="assets/js_logo.png" alt="logo JS">
         <p class="techText">
-          J'ai utilisé HTML pour faire toute la structure de ce site. C'est de cette manière que j'ai pus établir mon CSS par la suite
+          Le Js utilisé dans ce site se limite à celui utiliser par bootstrap pour le moment (carousel).
         </p>
       </div>
     </div>
