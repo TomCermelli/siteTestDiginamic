@@ -25,7 +25,7 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
               )
           );
 
-          
+
       $mail->Host = MAIL_SMTP;                    // Le SMPTP que l'on va utiliser par exemple gmail
       $mail->Port = 587;
       $mail->isSMTP(true);

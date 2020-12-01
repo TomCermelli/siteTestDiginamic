@@ -52,7 +52,7 @@ $current = "index";
       <div class="techPosition">
         <img class="logoSize" src="assets/js_logo.png" alt="logo JS">
         <p class="techText">
-          Le Js utilisé dans ce site se limite à celui utiliser par bootstrap pour le moment (carousel).
+          Le Js utilisé pour le moment se résume au carousel utilisé avec bootstrap.
         </p>
       </div>
     </div>
