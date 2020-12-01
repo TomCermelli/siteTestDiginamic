@@ -11,6 +11,7 @@ require 'vendor/autoload.php';
 $message_sent = false;
 $current = "contact";
 $mail = new PHPMailer();
+
 if(isset($_POST['email']) && $_POST['email'] != ''){
   if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
       $mail->SMTPAuth  = true;                                   // Enable SMTP authentication
@@ -24,6 +25,7 @@ if(isset($_POST['email']) && $_POST['email'] != ''){
               )
           );
 
+          
       $mail->Host = MAIL_SMTP;                    // Le SMPTP que l'on va utiliser par exemple gmail
       $mail->Port = 587;
       $mail->isSMTP(true);
