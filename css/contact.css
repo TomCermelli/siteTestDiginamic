@@ -1,0 +1,33 @@
+.contactContainer{
+  margin: 5% 25% 5% 25%;
+}
+
+.mainTitle{
+  text-align: center;
+}
+
+.heroText{
+  text-align: center;
+  margin: 4%;
+  line-height: 1.5em;
+}
+
+.userName{
+  display: flex;
+  margin: 2% 0 2% 0;
+}
+
+.subject{
+  display: flex;
+  margin: 2% 0 2% 0;
+}
+
+.mail{
+  display: flex;
+  margin: 2% 0 2% 0;
+}
+
+.userMessage{
+  display: flex;
+  margin: 2% 0 2% 0;
+}

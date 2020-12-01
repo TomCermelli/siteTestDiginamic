@@ -15,34 +15,42 @@ $current = "index";
 <body>
   <?php include "html/header.php" ?>
   <div class="bodyContainer">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="..." alt="First slide">
+          <img class="d-block w-100" src="assets/carou1.jpg" alt="Premier slide" height="1080">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Second slide">
+          <img class="d-block w-100" src="assets/carou2.jpg" alt="Second slide" height="1080">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Third slide">
+          <img class="d-block w-100" src="assets/carou3.jpg" alt="Troisième slide" height="1080">
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
     <div class="techContainer">
       <div class="techPosition">
         <img class="logoSize" src="assets/html_logo.jpg" alt="logo HTML">
         <p class="techText">
-          J'ai utilisé HTML pour faire toute la structure de ce site. C'est de cette manière que j'ai pus établir mon CSS par la suite
+          J'ai utilisé HTML pour faire toute la structure de ce site (essentiellement avec les div). C'est de cette manière que j'ai pus établir mon CSS par la suite.
         </p>
       </div>
       <div class="techPosition">
         <img class="logoSize" src="assets/css_logo.jpg" alt="logo CSS">
         <p class="techText">
-          J'ai utilisé HTML pour faire toute la structure de ce site. C'est de cette manière que j'ai pus établir mon CSS par la suite
+          Le CSS ( Cascading Style Sheets ) comme son nom l'indique m'a servie à mettre en place tout l’aspect esthétique du site ( placement, couleur, bordure etc...).
         </p>
       </div>
       <div class="techPosition">
-        <img class="logoSize" src="assets/js_logo.jpg" alt="logo JS">
+        <img class="logoSize" src="assets/js_logo.png" alt="logo JS">
         <p class="techText">
           J'ai utilisé HTML pour faire toute la structure de ce site. C'est de cette manière que j'ai pus établir mon CSS par la suite
         </p>
@@ -52,25 +60,27 @@ $current = "index";
       <div class="techPosition col-3">
         <img class="logoSize" src="assets/bootstrap_logo.png" alt="logo Bootstrap">
         <p class="techText">
-          J'ai utilisé HTML pour faire toute la structure de ce site. C'est de cette manière que j'ai pus établir mon CSS par la suite
+          Bootstrap m’a était utilise afin de mettre en place le carrousel que l’on peut voir sur la page d’accueil, ainsi que la navigation que l’on trouve sur toute les pages.
+          Le placement des technologies « Bootstrap » et  « PHP » ont était placé grâce aux classes inhérente de Bootstrapt (col-md-6 , active etc...)
         </p>
       </div>
       <div class="techPosition col-3">
-        <img class="logoSize" src="assets/php_logo.jpg" alt="logo PHP">
+        <img class="logoSize" src="assets/php_logo.png" alt="logo PHP">
         <p class="techText">
-          J'ai utilisé HTML pour faire toute la structure de ce site. C'est de cette manière que j'ai pus établir mon CSS par la suite
+          PHP m’a était très utile étant donnée que c’est avec cette technologie que j’ai fais mes accès à ma base de données.
+          C’est également avec lui que j’ai pus faire mon formulaire de contact et mon sondage,  la page test quand à elle permet de mettre en avant des exercices que j’ai effectué en PHP ( programmation objet, algorithme ).
         </p>
       </div>
     </div>
     <div class="heroContainer">
       <div class="col-6 pad">
-        <img src="assets/espace_de_travail.jpg" alt="espace de travail" width="100%">
+        <img class="w-100" src="assets/espace_de_travail.jpg" alt="espace de travail" >
       </div>
       <div class="pad col-6">
         <div class="heroText">
           <p class="heroText">
-            J'ai commencé le code en faisant des tutoriels HTML CSS et tout et tout
-          </p>
+            J'ai commencé le code en faisant des tutoriels HTML/CSS sur Codeacademy et Openclassroom, c’est en commençant de cette manière que Je me suis rendu compte que le code était amusant.
+            C’est pour quoi j'ai fais le choix de me former d’avantage afin d’en apprendre plus sur ce monde.
         </div>
       </div>
     </div>
@@ -78,12 +88,13 @@ $current = "index";
       <div class="col-6 heroText">
         <div class="heroText">
           <p class="techText">
-            J'ai commencé le code en faisant des tutoriels HTML CSS et tout et tout
+            Eo adducta re per Isauriam, rege Persarum bellis finitimis inligato repellenteque a conlimitiis suis ferocissimas gentes, quae mente quadam versabili hostiliter eum saepe incessunt et in nos arma moventem aliquotiens iuvant,
+            Nohodares quidam nomine e numero optimatum, incursare Mesopotamiam quotiens copia dederit ordinatus, explorabat nostra sollicite.
           </p>
         </div>
       </div>
       <div class="col-6 pad">
-        <img src="assets/relax.jpg" alt="relax image" width="100%">
+        <img class="w-100" src="assets/relax.jpg" alt="relax image">
       </div>
     </div>
     <?php include "html/footer.html" ?>
